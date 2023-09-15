@@ -46,3 +46,20 @@ class MissingNumber {
         }
         System.out.println("Missing number "+ (expectedSumOfArray - sum));
  * */
+
+
+ /*
+  * Time complexity explanation:
+
+public static int findMissingNumberInArray(int[] array) {: Time complexity is O(1) as it defines the function.
+int n = array.length + 1;: Time complexity is O(1) as it calculates n based on the array length.
+int expectedSum = (n * (n + 1)) / 2;: Time complexity is O(1) as it calculates the expected sum using the formula.
+int actualSum = 0;: Time complexity is O(1) as it initializes the actualSum variable.
+for (int number : array) {: The time complexity of the loop itself is O(n) because it iterates through each element in the input array, where n is the number of elements. The loop's time complexity will be determined by the operations inside the loop.
+actualSum += number;: Time complexity is O(1) as it performs a single addition operation.
+}: Time complexity is O(1) as it closes the for-each loop.
+return expectedSum - actualSum;: Time complexity is O(1) as it calculates the difference between the expected sum and the actual sum and returns the result.
+In summary, the time complexity of the findMissingNumberInArray function is determined by the for-each loop, which has a time complexity of O(n), where n is the number of elements in the input array. Since the operations inside the loop also have a time complexity of O(1), the overall time complexity of the findMissingNumberInArray function is O(n).
+
+
+  */
