@@ -136,4 +136,21 @@ public class DoublyLinkedList {
         }
         size--;
     }
+
+    /*DELETING ENTIRE DOUBLY LINKED LIST */
+    public void deleteEntireDLL() {
+        if(head == null) {
+            System.out.println("The DLL doesn't exist");
+            return;
+        } else {
+            DoublyNode tempNode = head;
+            for(int i=0; i<size; i++) {
+                tempNode.prev = null;
+                tempNode = tempNode.next;
+            }
+            head = null;
+            tail = null;
+            System.out.println("The DLL deleted successfully!");
+        }
+    }
 }

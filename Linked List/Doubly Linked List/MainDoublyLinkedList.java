@@ -9,6 +9,8 @@ public class MainDoublyLinkedList {
     dLL.reverseTraversalOfDLL();
     dLL.deleteNodeInDLL(1);
     dLL.traverseDLL();
+    dLL.deleteEntireDLL();
+    dLL.traverseDLL();
    }
     
 }
