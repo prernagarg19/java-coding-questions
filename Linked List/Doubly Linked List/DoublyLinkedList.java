@@ -49,4 +49,39 @@ public class DoublyLinkedList {
         }
         size++;
     }
+
+    /* TRAVERSAL OF DOUBLY LINKED LIST */
+    public void traverseDLL() {
+        if(head != null) {
+            DoublyNode tempNode = head;
+            for(int i=0; i<=size; i++) {
+                System.out.print(tempNode.value);
+                if(i != size) {
+                    System.out.print(" -> ");
+                }
+                tempNode = tempNode.next;
+            }
+        } else {
+            System.out.println("The DLL doesn't exists!");
+        }
+        System.out.println("\n");
+    }
+
+    /*REVERSE TRAVERSAL OF DOUBLY LINKED LIST */
+    public void reverseTraversalOfDLL() {
+        if(head != null) {
+            DoublyNode tempNode = tail;
+            for(int i=0; i<=size; i++) {
+                System.out.print(tempNode.value);
+                if(i != size) {
+                    System.out.print(" <- ");
+                }
+                tempNode = tempNode.prev;
+            }
+
+        } else {
+            System.out.println("The DLL doesn't exist!");
+        }
+        System.out.println("\n");
+    }
 }
