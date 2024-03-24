@@ -7,6 +7,8 @@ public class MainDoublyLinkedList {
     dLL.insertInDoublyLinkedList(4, 7);
     dLL.traverseDLL();
     dLL.reverseTraversalOfDLL();
+    dLL.deleteNodeInDLL(1);
+    dLL.traverseDLL();
    }
     
 }
