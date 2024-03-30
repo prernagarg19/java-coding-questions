@@ -3,5 +3,7 @@ public class MainCircularDoublyLinkedList {
         CircularDoublyLinkedList cDLL = new CircularDoublyLinkedList();
         cDLL.createCDLL(1);
         System.out.println(cDLL.head.value);
+        cDLL.insertNodeInCDLL(2,1);
+        System.out.println(cDLL.head.next.value);
     }
 }
