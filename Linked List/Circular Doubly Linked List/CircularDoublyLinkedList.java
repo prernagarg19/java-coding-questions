@@ -42,11 +42,60 @@ public class CircularDoublyLinkedList {
                 tempNode = tempNode.next;
                 idx++;
             }
-            newNode.prev = tempNode;
             newNode.next = tempNode.next;
-            tempNode.next = newNode;
+            newNode.prev = tempNode;
             newNode.next.prev = newNode;
+            tempNode.next = newNode;
         }
         size++;
+    }
+
+    /*TRAVERSING CIRCULAR DOUBLY LINKED LIST */
+    public void traverseCDLL() {
+        if(head != null) {
+            CircularDoublyNode tempNode = head;
+            for(int i=0; i<size; i++) {
+                System.out.print(tempNode.value);
+                if(i != size-1) {
+                    System.out.print("->");
+                }
+                tempNode = tempNode.next;
+            }
+        } else {
+            System.out.println("The Circular Doubly LL doesn't exist!");
+        }
+        System.out.println("\n");
+    }
+
+    /*REVERSE TRAVERSAL OF CIRCULAR DOUBLY LINKED LIST */
+    public void reverseTraversalCDLL() {
+        if(head != null) {
+            CircularDoublyNode tempNode = tail;
+            for(int i=0; i<size; i++) {
+                System.out.print(tempNode.value);
+                if(i != size-1) {
+                    System.out.print("<-");
+                }
+                tempNode = tempNode.prev;
+            }
+        } else {
+            System.out.println("The Circular Doubly LL doesn't exist!");
+        }
+        System.out.println("\n");
+    }
+
+    /*SEARCHING FOR A NODE IN CIRCULAR DOUBLY LINKED LIST */
+    public boolean searchCDLL(int nodeValue) {
+        if(head != null) {
+            CircularDoublyNode tempNode = head;
+            for(int i=0; i<size; i++) {
+               if(tempNode.value == nodeValue) {
+                System.out.println("value found at - "+ i);
+                return true;
+               }
+                tempNode = tempNode.next;
+            }
+        }
+        return false;
     }
 }
