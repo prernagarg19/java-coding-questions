@@ -98,4 +98,60 @@ public class CircularDoublyLinkedList {
         }
         return false;
     }
+
+    /*DELETION IN CIRCULAR DOUBLY LINKED LIST */
+    public void deleteNodeInCDLL(int location) {
+        if(head == null) {
+            System.out.println("The Circular Doubly LL doesn't exist");
+            return;
+        } else if(location == 0) {
+            if(size == 1) {
+                head.prev = null;
+                head.next = null;
+                head = null;
+                tail = null;
+                size--;
+                return;
+            } else {
+                head = head.next;
+                head.prev = tail;
+                tail.next = head;
+                size--;
+            }
+        } else if(location >= size) {
+            if(size == 1) {
+                head.prev = null;
+                head.next = null;
+                head = null;
+                tail = null;
+                size--;
+                return;
+            } else {
+                tail = tail.prev;
+                tail.next = head;
+                head.prev = tail;
+                size--;
+            }
+        } else {
+            CircularDoublyNode tempNode = head;
+            for(int i=0; i<location-1; i++) {
+                tempNode = tempNode.next;
+            }
+            tempNode.next = tempNode.next.next;
+            tempNode.next.prev = tempNode;
+            size--;
+        }
+    }
+
+    /*DELETE ENTIRE CIRCULAR DOUBLY LINKED LIST */
+    public void deleteEntireCDLL() {
+        CircularDoublyNode tempNode = head;
+        for (int i=0; i<size; i++) {
+            tempNode.prev = null;
+            tempNode = tempNode.next;
+        }
+        head = null;
+        tail = null;
+        System.out.println("The CDLL has been deleted!");
+    }
 }

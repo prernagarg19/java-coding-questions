@@ -5,7 +5,9 @@ public class MainCircularDoublyLinkedList {
         cDLL.insertNodeInCDLL(3,0);
         cDLL.insertNodeInCDLL(2,1);
         cDLL.traverseCDLL();
-        cDLL.reverseTraversalCDLL();
-        cDLL.searchCDLL(3);
+        // cDLL.reverseTraversalCDLL();
+        // cDLL.searchCDLL(3);
+        cDLL.deleteNodeInCDLL(0);
+        cDLL.traverseCDLL();
     }
 }
