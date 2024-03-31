@@ -14,7 +14,7 @@ public class RemoveDuplicates {
                 lList.size--;
             } else {
                 distinctValues.add(currentNode.value);
-                prevNode = currentNode;
+                prevNode = currentNode;    //update previous node
             }
             currentNode = currentNode.next;
         }
