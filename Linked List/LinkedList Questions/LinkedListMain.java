@@ -11,5 +11,8 @@ public class LinkedListMain {
         RemoveDuplicates deleteDups = new RemoveDuplicates();
         deleteDups.removeDuplicates(ll);
         ll.traverseLL();
+        RotateLinkedList lList = new RotateLinkedList();
+        lList.rotateLinkedList(ll, 2);
+        ll.traverseLL();
     }
 }
