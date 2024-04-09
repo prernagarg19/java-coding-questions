@@ -19,5 +19,18 @@ public class LinkedListMain {
         lList.reverseRotateLinkedList(ll,2);
         System.out.println("After Reverse rotation : ");
         ll.traverseLL();
+
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        singlyLinkedList.push(5);  // Success
+        singlyLinkedList.push(10);  // Success
+        singlyLinkedList.push(15);  // Success
+        singlyLinkedList.push(20);  // Success
+        singlyLinkedList.push(25);  // Success
+        Node temp = singlyLinkedList.removeNode(2);
+        System.out.println(temp.value);  //15
+        singlyLinkedList.removeNode(100); // null
+        System.out.println(singlyLinkedList.head.value);   // 5
+        System.out.println(singlyLinkedList.head.next.value);  // 10
+        System.out.println(singlyLinkedList.head.next.next.value);  // 20
     }
 }
