@@ -32,5 +32,10 @@ public class LinkedListMain {
         System.out.println(singlyLinkedList.head.value);   // 5
         System.out.println(singlyLinkedList.head.next.value);  // 10
         System.out.println(singlyLinkedList.head.next.next.value);  // 20
+
+
+        ReturnNthFromLast nthFromLast = new ReturnNthFromLast();
+        Node temp1 = nthFromLast.returnNthFromLast(ll, 3);
+        System.out.println(temp1.value);
     }
 }
