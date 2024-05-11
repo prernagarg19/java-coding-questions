@@ -4,6 +4,7 @@ public class CountDigits {
 
     //Brute Force Method
     //Time Complexity -> O(log10(N) + 1) because we are dividing number by 10 so log of base 10
+    //Space Complexity -> O(1)
     public static int countDigits(int number) {
         int count = 0;
         while(number > 0) {
@@ -22,7 +23,7 @@ public class CountDigits {
         System.out.println("The number of digits are - "+ numberOfDigits);
         //The number of digits can be calculated using log method
         //Optimal Approach
-        int count = (int)(Math.log10(n)+1);
+        int count = (int)(Math.log10(n)+1);  //Time Complexity O(1) and Space Complexity -> O(1)
         System.out.println("Optimal : count is - "+ count);
     }
 }
