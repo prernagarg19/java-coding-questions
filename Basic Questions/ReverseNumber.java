@@ -9,7 +9,9 @@ class ReverseNumber {
 		int num = sc.nextInt();
 		int reversedNumber=0;
 		int num1 = num;
-		while(num >0) {
+		// TIME COMPLEXITY -> log10(N)  
+		// SPACE COMPLEXITY -> O(1)
+		while(num >0) {       //for -ve number num != 0
 			int temp = num%10;
 			reversedNumber = reversedNumber*10 + temp;
 			num = num/10;
