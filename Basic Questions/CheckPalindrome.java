@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// TIME COMPLEXITY -> log10(N)+1
+// SPACE COMPLEXITY -> O(1)
 public class CheckPalindrome {
     public static boolean checkPalindrome(int number) {
         int reversedNumber = 0;
