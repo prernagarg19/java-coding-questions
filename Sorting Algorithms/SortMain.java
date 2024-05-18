@@ -4,5 +4,8 @@ public class SortMain {
         BubbleSort bS = new BubbleSort();
         bS.bubbleSort(arr);
         bS.printArray(arr);
+        SelectionSort ss = new SelectionSort();
+        ss.selectionSort(arr);
+        ss.printArray(arr);
     }
 }
